@@ -38,32 +38,38 @@
                     </button>
                     <nav>
                         <ul class="list nav__list">
-                            <li>
+                            <li class="nav__item">
                                     <a class="nav__link nav__link--bar" href="./Index.html">Студія</a>
                             </li> 
-                            <li>
+                            <li class="nav__item">
                                 <a class="nav__link" href="./portfolio.html">Портфоліо</a>
                             </li>
-                            <li>
+                            <li class="nav__item">
                                 <a class="nav__link" href="#">Контакти</a>
                             </li>
                         </ul>
                     </nav>
                     <ul class="list contact__list">
                         <li >
-                            <a class="contact__link" href="mailto:info@devstudio.com">
+                            <a class="contact__link--mail" href="mailto:info@devstudio.com">
                                 <svg class="contact__icon" width="16px" height="12px">
                                     <use href="./image/icons.svg#icon-envelope"></use>
                                 </svg>
                                 info@devstudio.com</a>
                         </li>
                         <li>
-                            <a class="contact__link" href="tel:+380961111111">
+                            <a class="contact__link--tel" href="tel:+380961111111">
                             <svg class="contact__icon" width="10px" height="16px">
                                 <use href="./image/icons.svg#icon-phone"></use>
                             </svg>
                             +38 096 111 11 11</a></li>
                     </ul>
+                    <div class="nav__social">
+                        <a class="nav__social--link" href="#">Instagram</a>
+                        <a class="nav__social--link" href="#">Twitter</a>
+                        <a class="nav__social--link" href="#">Facebook</a>
+                        <a class="nav__social--link" href="#">LinkedIn</a>
+                    </div>
                 </div>
             </div>            
     </header>
@@ -136,7 +142,7 @@
 <section class="advantages">
     <div class="container"> 
         <ul class="list advantages__container">
-            <li>
+            <li class="advantages__item">
                 <div class="advantages__icon">
                     <svg width="70px" height="70px">
                         <use href="./image/icons.svg#icon-antenna-1"></use>
@@ -145,7 +151,7 @@
                 <h3 class="advantages__title">Увага до деталей</h3>
                 <p class="advantages__text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
             </li>
-            <li>
+            <li class="advantages__item">
                 <div class="advantages__icon">
                     <svg width="70px" height="70px">
                         <use href="./image/icons.svg#icon-clock-1"></use>
@@ -154,7 +160,7 @@
                 <h3 class="advantages__title">Пунктуальність</h3>
                 <p class="advantages__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
             </li>
-            <li>
+            <li class="advantages__item">
                 <div class="advantages__icon">
                     <svg  width="70px" height="70px">
                          <use href="./image/icons.svg#icon-diagram-1"></use>
@@ -163,7 +169,7 @@
                 <h3 class="advantages__title">Планування</h3>
                 <p class="advantages__text">Так само консультація з широким активом значною мірою зумовлює.</p>
             </li>
-            <li>
+            <li class="advantages__item">
                 <div class="advantages__icon">
                     <svg width="70px" height="70px">
                         <use href="./image/icons.svg#icon-astronaut-1"></use>
@@ -403,7 +409,7 @@
     <!-- Секція футер -->
     <footer class="footer">
         <div class="container footer__container">
-            <div>
+            <div class="footer__container--logo">
                 <div class="footer__logo">
                     <a class="logo" href="./Index.html"><span class="footer__logo--web">Web</span> <span
                             class="footer__logo--studio">Studio</span></a>
@@ -457,7 +463,7 @@
             </ul>
         </div>          
         </div>
-        <div>
+        <div class="footer__container--input">
             <h3 class="footer__title footer__title--input">Підпишіться на розсилку</h3>
             <input class="footer__input" type="email" name="email" id="E-mail" placeholder="E-mail">
                 <button class="footer__button" type="submit">

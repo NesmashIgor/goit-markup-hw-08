@@ -3,10 +3,14 @@
     height: 604px;
     padding-top: 60px;
     padding-bottom: 60px;
-    
-    @media screen and (min-width: 768px) {}
-    
-    @media screen and (min-width: 1200px) {}
+
+    @media screen and (min-width: 768px) {
+        height: 464px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 251px;
+    }
 }
 
 .footer__title {
@@ -17,9 +21,6 @@
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    @media screen and (min-width: 768px) {}
-    
-    @media screen and (min-width: 1200px) {}
 }
 
 .footer__title--input {
@@ -31,22 +32,40 @@
 
 .footer__title--social {
 
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
     
     @media screen and (min-width: 1200px) {
+        text-align: start;
         margin-left: 94px;
+        padding-bottom: 20px;
+        padding-right: 0;
     }
 }
 
 .footer__container {
     text-align: center;
 
-    @media screen and (min-width: 768px) {}
-    
     @media screen and (min-width: 1200px) {
         display: flex;
         text-align: start;
     }
+}
+
+.footer__container--logo {
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        padding-left: 100px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        position: static;
+        padding-left: 0;
+    }
+    
 }
 
 .footer__logo {
@@ -96,9 +115,15 @@
 .footer__social {
     margin-top: 60px;
 
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        transform: translateX(100%);
+        text-align: end;
+        margin-top: 0;
+    }
     
     @media screen and (min-width: 1200px) {
+        transform: translate(70%,0%);
         margin-left: 0px;
         margin-right: 94px;
         margin-top: 12px;
@@ -147,14 +172,23 @@
         background-color: $color-brand-primary;
         outline-style: none;
         }
-
-    @media screen and (min-width: 768px) {}
-    
-    @media screen and (min-width: 1200px) {}
 }
 
 .footer__social--icon {
     fill: $color-brand-secondary;
+}
+
+.footer__container--input {
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        transform: translate(35%, 200%);
+    }
+
+    @media screen and (min-width: 1200px) {
+        position: static;
+        transform: translate(106%,0);
+    }
 }
 
 .footer__input {
@@ -167,8 +201,6 @@
     border: 1px solid #FFFFFF4D;
     border-radius: 4px;
     margin-bottom: 20px;
-
-    @media screen and (min-width: 768px) {}
     
     @media screen and (min-width: 1200px) {
         width: 358px;
@@ -193,7 +225,9 @@
     text-align: start;
     margin-left: 120px;
 
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+        margin-left: 135px;
+    }
     
     @media screen and (min-width: 1200px) {
         display: inline;

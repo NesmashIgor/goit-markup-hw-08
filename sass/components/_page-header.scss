@@ -10,14 +10,13 @@
     margin: 0 auto;
 
         @media screen and (min-width: 768px) {
-            width: 768px;
+            display: flex;
+            width: 738px;
+            height: 80px;
         }
     
         @media screen and (min-width: 1200px) {
-            display: flex;
             width: 1200px;
-            // margin: 0 auto;
-            height: 80px;
         }
 }
 
@@ -26,14 +25,16 @@
     padding-bottom: 16px;
 
             @media screen and (min-width: 768px) {
+                display: flex;
+                padding-top: 26px;
+                padding-bottom: 25px;
+                margin-right: 77px;
+                align-items: center;
             }
         
             @media screen and (min-width: 1200px) {
-                display: flex;
                 padding-top: 24px;
-                padding-bottom: 25px;
                 margin-right: 93px;
-                align-items: center;
             }
 }
 
@@ -55,7 +56,7 @@
 
 .nav {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -64,37 +65,54 @@
     background-color: $color-brand-secondary;
 
     @media screen and (min-width: 768px) {
-        display: flex
-    }
-
-    @media screen and (min-width: 1200px) {
         position: static;
-        display: flex;
-        width: auto;
-        align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        height: 80px;
-        top: auto;
-        left: auto;
-        padding: 0;
+            display: flex;
+            width: auto;
+            align-items: center;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            height: 80px;
+            top: auto;
+            left: auto;
+            padding: 0;
+        
     }
 
     &.is-open {
         display: block;
+        z-index: 9999;
     }
 }
 
 .nav__list {
 
-    @media screen and (min-width: 768px) {}
-    
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 50px;
+        margin-right: 88px;
     }
+    
+    @media screen and (min-width: 1200px) {
+        margin-right: 0;
+    }
+}
+
+.nav__item {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 40%;
+    }
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+            
+                &:last-child {
+                    margin-bottom: 0;
+                }
+        }
 }
 
 .nav__link {
@@ -106,28 +124,24 @@
     text-decoration: none;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 40px;
 
     &:hover,
     &:focus {
             color: $color-brand-primary;
             outline: none;
-        }
+            }
 
-    @media screen and (min-width: 768px) {}
-    
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
         font-size: 14px;
     }
 }
 
 .nav__link--bar {
 
-    @media screen and (min-width: 768px) {}
-    
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
         position: relative;
-        &::after {
+        
+            &::after {
                 content: "";
                 display: block;
                 position: absolute;
@@ -142,11 +156,15 @@
 }
 
 .contact__list {
+    display: flex;
+    flex-direction: column-reverse;
     
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+    }
     
     @media screen and (min-width: 1200px) {
-        display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         gap: 40px;
@@ -155,9 +173,49 @@
     }
 }
 
-.contact__link {
+.contact__link--mail {
+    font-size: 24px;
+    line-height: 1.172;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 64px;
     color: $color-text-secondary;
     display: flex;
+    text-decoration: none;
+    align-items: center;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $color-brand-primary;
+        fill: currentColor;
+        outline: none;
+    }
+
+    @media screen and (min-width: 768px) {
+            font-size: 12px;
+            line-height: 1.171;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.172;
+        margin-bottom: 0;
+    }
+}
+
+.contact__link--tel {
+    display: flex;
+    font-size: 34px;
+    line-height: 1.171;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $color-brand-primary;
+    margin-bottom: 32px;
     text-decoration: none;
     align-items: center;
     transition-duration: 250ms;
@@ -170,18 +228,48 @@
             outline: none;
         }
 
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+        color: $color-text-secondary;
+            font-size: 12px;
+            line-height: 1.171;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 0;
+    }
         
     @media screen and (min-width: 1200px) {
             font-size: 14px;
             line-height: 1.172;
-            font-weight: 500;
-            letter-spacing: 0.02em;
     }
 }
 
 .contact__icon {
-    fill: currentColor;
-    cursor: pointer;
-    margin-right: 10px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+            fill: currentColor;
+            cursor: pointer;
+            margin-right: 10px;
+    }
+}
+
+.nav__social {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.nav__social--link {
+    font-size: 18px;
+    line-height: 1.122;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $color-brand-primary;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+
+    &:last-child {
+        border: 0;
+    }
 }

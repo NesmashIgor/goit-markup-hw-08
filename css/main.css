@@ -16,7 +16,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 738px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -66,16 +66,16 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .header__container {
-    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 738px;
+    height: 80px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     width: 1200px;
-    height: 80px;
   }
 }
 
@@ -83,17 +83,23 @@ textarea {
   padding-top: 16px;
   padding-bottom: 16px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header__logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 24px;
+    padding-top: 26px;
     padding-bottom: 25px;
-    margin-right: 93px;
+    margin-right: 77px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    margin-right: 93px;
   }
 }
 
@@ -115,7 +121,7 @@ textarea {
 
 .nav {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -124,13 +130,6 @@ textarea {
   background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
-  .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-@media screen and (min-width: 1200px) {
   .nav {
     position: static;
     display: -webkit-box;
@@ -150,9 +149,10 @@ textarea {
 }
 .nav.is-open {
   display: block;
+  z-index: 9999;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -164,6 +164,27 @@ textarea {
         -ms-flex-pack: justify;
             justify-content: space-between;
     gap: 50px;
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    margin-right: 0;
+  }
+}
+
+.nav__item {
+  margin-bottom: 32px;
+}
+.nav__item:last-child {
+  margin-bottom: 40%;
+}
+@media screen and (min-width: 768px) {
+  .nav__item {
+    margin-bottom: 0;
+  }
+  .nav__item:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -178,19 +199,18 @@ textarea {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 40px;
 }
 .nav__link:hover, .nav__link:focus {
   color: #2196F3;
   outline: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__link {
     font-size: 14px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__link--bar {
     position: relative;
   }
@@ -208,11 +228,29 @@ textarea {
   }
 }
 
+.contact__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .contact__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 @media screen and (min-width: 1200px) {
   .contact__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -225,7 +263,12 @@ textarea {
   }
 }
 
-.contact__link {
+.contact__link--mail {
+  font-size: 24px;
+  line-height: 1.172;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 64px;
   color: #757575;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,24 +282,98 @@ textarea {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact__link:hover, .contact__link:focus {
+.contact__link--mail:hover, .contact__link--mail:focus {
   color: #2196F3;
   fill: currentColor;
   outline: none;
 }
-@media screen and (min-width: 1200px) {
-  .contact__link {
-    font-size: 14px;
-    line-height: 1.172;
+@media screen and (min-width: 768px) {
+  .contact__link--mail {
+    font-size: 12px;
+    line-height: 1.171;
     font-weight: 500;
     letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__link--mail {
+    font-size: 14px;
+    line-height: 1.172;
+    margin-bottom: 0;
+  }
+}
+
+.contact__link--tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 34px;
+  line-height: 1.171;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+  margin-bottom: 32px;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact__link--tel:hover, .contact__link--tel:focus {
+  color: #2196F3;
+  fill: currentColor;
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .contact__link--tel {
+    color: #757575;
+    font-size: 12px;
+    line-height: 1.171;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__link--tel {
+    font-size: 14px;
+    line-height: 1.172;
   }
 }
 
 .contact__icon {
-  fill: currentColor;
-  cursor: pointer;
-  margin-right: 10px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact__icon {
+    display: block;
+    fill: currentColor;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__social {
+    display: none;
+  }
+}
+
+.nav__social--link {
+  font-size: 18px;
+  line-height: 1.122;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+.nav__social--link:last-child {
+  border: 0;
 }
 
 .menu-button__open {
@@ -287,15 +404,22 @@ textarea {
 
 .hero {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero-back.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-back.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
@@ -576,8 +700,14 @@ textarea {
   text-align: center;
   margin-bottom: 50px;
 }
+@media screen and (min-width: 768px) {
+  .main-title {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .main-title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.171;
   }
@@ -591,7 +721,7 @@ textarea {
 
 /* Переваги (advantages) секція */
 .advantages {
-  padding-top: 64px;
+  padding-top: 60px;
 }
 @media screen and (min-width: 1200px) {
   .advantages {
@@ -610,7 +740,13 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .advantages__container {
-    width: 768px;
+    width: 738px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -619,10 +755,23 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    gap: 30px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    width: 100%;
   }
 }
 
@@ -641,6 +790,11 @@ textarea {
   background-color: #F5F4FA;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .advantages__icon {
+    width: 354px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .advantages__icon {
@@ -670,6 +824,12 @@ textarea {
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .advantages__text {
+    margin-bottom: 0;
+  }
+}
+
 /* Проекти секція */
 @media screen and (max-width: 1199px) {
   .product {
@@ -745,11 +905,19 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     gap: 30px;
   }
 }
@@ -766,6 +934,20 @@ textarea {
 .team__card:last-child {
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .team__card {
+    width: calc((100% - 30px) / 2);
+  }
+  .team__card:last-child {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__card:last-child {
+    margin-bottom: 30px;
+  }
+}
+
 .team__card--container {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1009,6 +1191,17 @@ textarea {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 464px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    height: 251px;
+  }
+}
+
 .footer__title {
   color: #FFFFFF;
   padding-bottom: 20px;
@@ -1018,6 +1211,7 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 @media screen and (min-width: 1200px) {
   .footer__title--input {
     text-align: start;
@@ -1025,9 +1219,18 @@ textarea {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer__title--social {
+    padding-right: 40px;
+    padding-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__title--social {
+    text-align: start;
     margin-left: 94px;
+    padding-bottom: 20px;
+    padding-right: 0;
   }
 }
 
@@ -1040,6 +1243,19 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     text-align: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container--logo {
+    position: absolute;
+    padding-left: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container--logo {
+    position: static;
+    padding-left: 0;
   }
 }
 
@@ -1090,8 +1306,19 @@ textarea {
 .footer__social {
   margin-top: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer__social {
+    position: absolute;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    text-align: end;
+    margin-top: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__social {
+    -webkit-transform: translate(70%, 0%);
+            transform: translate(70%, 0%);
     margin-left: 0px;
     margin-right: 94px;
     margin-top: 12px;
@@ -1151,8 +1378,24 @@ textarea {
   background-color: #2196F3;
   outline-style: none;
 }
+
 .footer__social--icon {
   fill: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container--input {
+    position: absolute;
+    -webkit-transform: translate(35%, 200%);
+            transform: translate(35%, 200%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container--input {
+    position: static;
+    -webkit-transform: translate(106%, 0);
+            transform: translate(106%, 0);
+  }
 }
 
 .footer__input {
@@ -1188,6 +1431,11 @@ textarea {
   cursor: pointer;
   text-align: start;
   margin-left: 120px;
+}
+@media screen and (min-width: 768px) {
+  .footer__button {
+    margin-left: 135px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__button {
