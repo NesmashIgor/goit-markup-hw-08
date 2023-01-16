@@ -20,19 +20,32 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
+    width: 450px;
     height: 581px;
     background-color: $color-brand-secondary;
     border-radius: 4px;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
 }
 
 .modal__title {
     font-size: 20px;
-    line-height: 1.172;
+    line-height: 1.5;
     font-weight: 700;
     letter-spacing: 0.03em;
     margin: 40px 40px 12px 40px;
     text-align: center;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        line-height: 1.172;
+    }
 }
 
 .modal__text {
@@ -69,21 +82,36 @@
 }
 
 .modal__policy--text {
-    font-size: 14px;
-    line-height: 1.714;
-    font-weight: 400;
-    padding-left: 35px;
-    letter-spacing: 0.03em;
     color: $color-text-secondary;
+    font-size: 12px;
+    line-height: 1.171;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    padding-left: 21px;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.714;
+        padding-left: 35px;
+    }
 }
 
 .modal__policy--link {
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.171;
     font-weight: 400;
     letter-spacing: 0.03em;
     color: $color-brand-primary;
     text-decoration: underline;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.714;
+    }
 }
 
 .modal__formfield {
@@ -103,8 +131,8 @@
 }
 
 .input__field {
-    Width: 448px;
-    Height: 40px;
+    width: 370px;
+    height: 40px;
     padding: 0 0 0 42px;
     border: 1px solid #21212133;
     border-radius: 4px;
@@ -114,6 +142,12 @@
 
     &:focus-within {
         border-color: $color-brand-primary;
+    }
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        width: 448px;
     }
 }
 
@@ -131,7 +165,7 @@
 .checkbox__icon {
     display: inline-block;
     position: absolute;
-    transform: translate(-150%, 28%);
+    transform: translate(-150%, 20%);
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
@@ -141,6 +175,12 @@
             background-image: url(../image/check.svg);
             background-size: contain;
             border: 0;
+        }
+
+        @media screen and (min-width: 768px) {}
+    
+        @media screen and (min-width: 1200px) {
+            transform: translate(-150%, 28%);
         }
 }
 

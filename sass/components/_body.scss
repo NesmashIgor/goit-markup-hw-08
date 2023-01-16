@@ -5,14 +5,23 @@
 body {
     color: $color-text-primary;
     font-family: "Roboto", sans-serif;
-    width: auto;
 }
 
 .container {
-    width: 1200px;
+    width: 450px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    overflow: hidden;
+        
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+        padding-right: 15px;
+        padding-left: 15px;
+        // overflow: visible;
+    }
 }
 
 ul,h1,h2,h3,p {
@@ -29,7 +38,13 @@ a {
 }
 
 .section {
-    padding: 94px 0;
+    padding: 60px 0;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0;
+    }
 }
 
 textarea {

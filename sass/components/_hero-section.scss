@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-title-back.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-back.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -12,14 +12,21 @@
 
 .hero__title {
     color: $color-brand-secondary;
-    font-size: 44px;
-    line-height: 1.363;
+    font-size: 26px;
+    line-height: 1.615;
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
     margin-top: 0;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.363;
+    }
 }
 
 .hero__button {

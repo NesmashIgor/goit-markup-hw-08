@@ -23,8 +23,19 @@
                 <div class="header__logo">
                     <a class="logo" href="./Index.html"><span class="header__logo--web">Web</span> 
                         <span class="header__logo--studio">Studio</span></a>
+                            <button class="menu-button__open js-open-menu" 
+                            type="button" aria-expanded="false">
+                                <svg width="40px" height="40px" aria-label="відчинення мобільного меню">
+                                    <use class="icon-menu_mobile" href="./image/icons.svg#icon-menu_mobile"></use>
+                                </svg>
+                            </button>
                 </div>
-                <div class="nav">
+                <div class="nav js-menu-container">
+                    <button class="menu-button__close js-close-menu">
+                        <svg width="40px" height="40px" aria-label="зачинення мобільного меню">
+                            <use class="icon-close_mobile" href="./image/icons.svg#icon-close_mobile"></use>
+                        </svg>
+                    </button>
                     <nav>
                         <ul class="list nav__list">
                             <li>
@@ -54,7 +65,7 @@
                             +38 096 111 11 11</a></li>
                     </ul>
                 </div>
-            </div>   
+            </div>            
     </header>
     <main>
 
@@ -165,9 +176,9 @@
     </div>
 </section>
 <!-- Секція Проекти-->
-<section class="section">
-    <div class="container">
-            <h2 class="main-title">Чим ми займаємося</h2>
+<section class="section hidden__mobile">
+    <div class="container hidden__mobile">
+            <h2 class="main-title hidden__mobile">Чим ми займаємося</h2>
             <ul class="list product">
                 <li>
                     <div class="product__item">
@@ -389,6 +400,7 @@
             </div>
         </section>
     </main>
+    <!-- Секція футер -->
     <footer class="footer">
         <div class="container footer__container">
             <div>
@@ -411,10 +423,8 @@
                     </address>
                 </div>
         <div class="footer__social">
-            <div>
-                <h3 class="footer__title">приєднуйтесь</h3>
-            </div>
-            <div>
+                <h3 class="footer__title footer__title--social">приєднуйтесь</h3>
+            <div class="footer__social--container">
                 <ul class="list footer__social--list">
                 <li class="footer__social--items">
                     <a class="footer__social--link" href="#">
@@ -448,10 +458,10 @@
         </div>          
         </div>
         <div>
-            <h3 class="footer__title">Підпишіться на розсилку</h3>
+            <h3 class="footer__title footer__title--input">Підпишіться на розсилку</h3>
             <input class="footer__input" type="email" name="email" id="E-mail" placeholder="E-mail">
                 <button class="footer__button" type="submit">
-                        <span class="footer__button--text">Підписатися</span>
+                    <span class="footer__button--text">Підписатися</span>
                         <svg class="footer__button--icon" width="24px" height="24px">
                             <use href="./image/icons.svg#icon-icon-send"></use>
                         </svg>

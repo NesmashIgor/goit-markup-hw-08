@@ -1,32 +1,71 @@
 .main-title {
     color: $color-text-primary;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.171;
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 50px;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        line-height: 1.171;
+    }
+}
+
+.hidden__mobile {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 
 /* Переваги (advantages) секція */
 
 .advantages {
-    padding-top: 94px;
+    padding-top: 64px;
+
+    @media screen and (min-width: 768px) {
+
+    }
+    
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+    }
 }
 
 .advantages__container {
-    display: flex;
+    width: 450px;
     justify-content: space-between;
-    gap: 30px;
+    align-items: center;
+
+        @media screen and (min-width: 768px) {
+            width: 768px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+        width: 1200px;
+        display: flex;
+        align-items: baseline;
+        gap: 30px;
+        }
 }
 
 .advantages__icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 450px;
     height: 120px;
     background-color: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
 }
 
 .advantages__title {
@@ -36,6 +75,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+            text-align: center;
+        }
 }
 
 .advantages__text {
@@ -44,21 +87,40 @@
     line-height: 1.714;
     font-weight: 400;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+
+    }
 }
 
 /* Проекти секція */
 
 .product {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
 }
 
 .product__item {
     position: relative;
     width: 370px;
     height: 294px;
+
+    @media screen and (max-width: 1199px) {
+            display: none;
+        }
 }
 
 .product__bar {
@@ -69,6 +131,10 @@
     background-color: rgba(47, 48, 58, 0.8);
     text-align: center;
     padding-top: 27px;
+
+    @media screen and (max-width: 1199px) {
+            display: none;
+        }
 }
 
 .product__text {
@@ -78,28 +144,47 @@
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 
 /* Секція Команда */
 
 .team {
     background-color: #F5F4FA;
-    padding: 94px 0;
+    padding: 60px 0;
 }
 
 .team__container {
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    
+        @media screen and (min-width: 768px) {
+        }
+    
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            gap: 30px;
+        }
 }
 
 .team__card {
     border: 0 solid rgba(255, 255, 255, 1);
     background-color: $color-brand-secondary;
     text-align: center;
+    margin-bottom: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {}
 }
 
 .team__card--container {
@@ -164,8 +249,14 @@
 
 .client-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    
+    
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {}
 }
 
 .client-icon {
