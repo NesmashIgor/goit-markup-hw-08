@@ -39,33 +39,39 @@
                 </button>
                 <nav>
                     <ul class="list nav__list">
-                        <li>
+                        <li class="nav__item">
                             <a class="nav__link nav__link--bar" href="./Index.html">Студія</a>
                         </li>
-                        <li>
+                        <li class="nav__item">
                             <a class="nav__link" href="./portfolio.html">Портфоліо</a>
                         </li>
-                        <li>
+                        <li class="nav__item">
                             <a class="nav__link" href="#">Контакти</a>
                         </li>
                     </ul>
                 </nav>
                 <ul class="list contact__list">
                     <li>
-                        <a class="contact__link" href="mailto:info@devstudio.com">
+                        <a class="contact__link--mail" href="mailto:info@devstudio.com">
                             <svg class="contact__icon" width="16px" height="12px">
                                 <use href="./image/icons.svg#icon-envelope"></use>
                             </svg>
                             info@devstudio.com</a>
                     </li>
                     <li>
-                        <a class="contact__link" href="tel:+380961111111">
+                        <a class="contact__link--tel" href="tel:+380961111111">
                             <svg class="contact__icon" width="10px" height="16px">
                                 <use href="./image/icons.svg#icon-phone"></use>
                             </svg>
                             +38 096 111 11 11</a>
                     </li>
                 </ul>
+                <div class="nav__social">
+                    <a class="nav__social--link" href="#">Instagram</a>
+                    <a class="nav__social--link" href="#">Twitter</a>
+                    <a class="nav__social--link" href="#">Facebook</a>
+                    <a class="nav__social--link" href="#">LinkedIn</a>
+                </div>
             </div>
         </div>
     </header>
@@ -139,7 +145,7 @@
         <section class="advantages">
             <div class="container">
                 <ul class="list advantages__container">
-                    <li>
+                    <li class="advantages__item">
                         <div class="advantages__icon">
                             <svg width="70px" height="70px">
                                 <use href="./image/icons.svg#icon-antenna-1"></use>
@@ -149,7 +155,7 @@
                         <p class="advantages__text">Ідейні міркування, і навіть початок повсякденної роботи з формування
                             позиції.</p>
                     </li>
-                    <li>
+                    <li class="advantages__item">
                         <div class="advantages__icon">
                             <svg width="70px" height="70px">
                                 <use href="./image/icons.svg#icon-clock-1"></use>
@@ -159,7 +165,7 @@
                         <p class="advantages__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у
                             себе.</p>
                     </li>
-                    <li>
+                    <li class="advantages__item">
                         <div class="advantages__icon">
                             <svg width="70px" height="70px">
                                 <use href="./image/icons.svg#icon-diagram-1"></use>
@@ -168,7 +174,7 @@
                         <h3 class="advantages__title">Планування</h3>
                         <p class="advantages__text">Так само консультація з широким активом значною мірою зумовлює.</p>
                     </li>
-                    <li>
+                    <li class="advantages__item">
                         <div class="advantages__icon">
                             <svg width="70px" height="70px">
                                 <use href="./image/icons.svg#icon-astronaut-1"></use>
@@ -191,7 +197,10 @@
                             <div class="product__bar">
                                 <p class="product__text">десктопні додатки</p>
                             </div>
-                            <img src="./image/box1.jpg" alt="Людина користується комп'ютером" width="370" height="294">
+                            <img srcset="
+                            ./image/box1.jpg 370w,
+                            ./image/box1x2.jpg 740w" sizes="370px" src="./image/box1.jpg"
+                                alt="Людина користується комп'ютером">
                         </div>
                     </li>
                     <li>
@@ -199,7 +208,10 @@
                             <div class="product__bar">
                                 <p class="product__text">мобільні додатки</p>
                             </div>
-                            <img src="./image/box2.jpg" alt="Людина користується смарфоном" width="370" height="294">
+                            <img srcset="
+                            ./image/box2.jpg 370w,
+                            ./image/box2x2.jpg 740w" sizes="370px" src="./image/box2.jpg"
+                                alt="Людина користується смарфоном">
                         </div>
                     </li>
                     <li>
@@ -207,7 +219,10 @@
                             <div class="product__bar">
                                 <p class="product__text">дизайнерські рішення</p>
                             </div>
-                            <img src="./image/box3.jpg" alt="Людина користується планшетом" width="370" height="294">
+                            <img srcset="
+                            ./image/box3.jpg 370w,
+                            ./image/box3x2.jpg 740w" sizes="370px" src="./image/box3.jpg"
+                                alt="Людина користується планшетом">
                         </div>
                     </li>
                 </ul>
@@ -218,8 +233,16 @@
             <div class="container">
                 <h2 class="main-title">Наша команда</h2>
                 <ul class="list team__container">
-                    <li class="team__card"><img src="./image/team1.jpg" alt="Зображено Ігоря Дем'яненко" width="270"
-                            height="260">
+                    <li class="team__card">
+                        <img class="team__card--img" srcset="
+                            ./image/PC-team1.jpg 270w,
+                            ./image/PC-team1x2.jpg 540w,
+                            ./image/tablet-team1.jpg 354w,
+                            ./image/tablet-team1x2.jpg 708w,
+                            ./image/mobile-team1.jpg 450w,
+                            ./image/mobile-team1x2.jpg 900w"
+                            sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                            src="./image/PC-team1.jpg" alt="Зображено Ігоря Дем'яненко">
                         <div class="team__card--container">
                             <h3 class="team__card--title">Ігор Дем'яненко</h3>
                             <span class="team__card--text">Product Designer</span>
@@ -255,8 +278,16 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__card"><img src="./image/team2.jpg" alt="Зображено Ольгу Рєпіну" width="270"
-                            height="260">
+                    <li class="team__card">
+                        <img class="team__card--img" srcset="
+                            ./image/PC-team2.jpg 270w,
+                            ./image/PC-team2x2.jpg 540w,
+                            ./image/tablet-team2.jpg 354w,
+                            ./image/tablet-team2x2.jpg 708w,
+                            ./image/mobile-team2.jpg 450w,
+                            ./image/mobile-team2x2.jpg 900w"
+                            sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                            src="./image/PC-team2.jpg" alt="Зображено Ольгу Рєпіну">
                         <div class="team__card--container">
                             <h3 class="team__card--title">Ольга Рєпіна</h3>
                             <span class="team__card--text">Frontend Developer</span>
@@ -292,8 +323,16 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__card"><img src="./image/team3.jpg" alt="Зображено Миколу Тарасова" width="270"
-                            height="260">
+                    <li class="team__card">
+                        <img class="team__card--img" srcset="
+                            ./image/PC-team3.jpg 270w,
+                            ./image/PC-team3x2.jpg 540w,
+                            ./image/tablet-team3.jpg 354w,
+                            ./image/tablet-team3x2.jpg 708w,
+                            ./image/mobile-team3.jpg 450w,
+                            ./image/mobile-team3x2.jpg 900w"
+                            sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                            src="./image/PC-team3.jpg" alt="Зображено Миколу Тарасова">
                         <div class="team__card--container">
                             <h3 class="team__card--title">Микола Тарасов</h3>
                             <span class="team__card--text">Marketing</span>
@@ -329,8 +368,16 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__card"><img src="./image/team4.jpg" alt="Зображено Михайла Єрмакова" width="270"
-                            height="260">
+                    <li class="team__card">
+                        <img class="team__card--img" srcset="
+                            ./image/PC-team4.jpg 270w,
+                            ./image/PC-team4x2.jpg 540w,
+                            ./image/tablet-team4.jpg 354w,
+                            ./image/tablet-team4x2.jpg 708w,
+                            ./image/mobile-team4.jpg 450w,
+                            ./image/mobile-team4x2.jpg 900w"
+                            sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                            src="./image/PC-team4.jpg" alt="Зображено Михайла Єрмакова">
                         <div class="team__card--container">
                             <h3 class="team__card--title">Михайло Єрмаков</h3>
                             <span class="team__card--text">UI Designer</span>
@@ -425,7 +472,7 @@
     <!-- Секція футер -->
     <footer class="footer">
         <div class="container footer__container">
-            <div>
+            <div class="footer__container--logo">
                 <div class="footer__logo">
                     <a class="logo" href="./Index.html"><span class="footer__logo--web">Web</span> <span
                             class="footer__logo--studio">Studio</span></a>
@@ -480,7 +527,7 @@
                     </ul>
                 </div>
             </div>
-            <div>
+            <div class="footer__container--input">
                 <h3 class="footer__title footer__title--input">Підпишіться на розсилку</h3>
                 <input class="footer__input" type="email" name="email" id="E-mail" placeholder="E-mail">
                 <button class="footer__button" type="submit">
@@ -495,5 +542,4 @@
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
 </body>
-
 </html>
