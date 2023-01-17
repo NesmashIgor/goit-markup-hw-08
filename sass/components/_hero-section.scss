@@ -1,18 +1,44 @@
 .hero {
     max-width: 1600px;
-    height: 400px;
     margin: 0 auto;
     padding-top: 118px;
     padding-bottom: 118px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-back.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/mobile-hero-back.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 480px 400px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/mobile-hero-backx2.jpg);
+        }
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/tablet-hero-back.jpg);
+        background-size: 768px 400px;
+
+        @media screen and (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/tablet-hero-backx2.jpg);
+            }
+    }
     
-    @media screen and (min-width: 1200px) {
-        height: 600px;
+    @media screen and (min-width: 1200px)  {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/PC-hero-back.jpg);
         padding-top: 200px;
         padding-bottom: 200px;
+        background-size: cover;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/PC-hero-backx2.jpg);
+        }
     }
 }
 

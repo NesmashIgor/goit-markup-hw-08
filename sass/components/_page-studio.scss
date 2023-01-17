@@ -47,7 +47,6 @@
     
         @media screen and (min-width: 1200px) {
         width: 1200px;
-        display: flex;
         flex-wrap: nowrap;
         align-items: baseline;
         padding-bottom: 0;
@@ -105,10 +104,6 @@
     font-weight: 400;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
-
-    @media screen and (min-width: 768px) {
-
-    }
     
     @media screen and (min-width: 1200px) {
         margin-bottom: 0;
@@ -122,7 +117,6 @@
     @media screen and (max-width: 1199px) {
         display: none;
     }
-
 
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -210,12 +204,22 @@
                 margin-bottom: 30px;
             }
     }
+}
+
+.team__card--img{
+    width: 450px;
+    height: 460px;
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+        height: 374px;
+    }
     
     @media screen and (min-width: 1200px) {
-        &:last-child {
-                margin-bottom: 30px;
-            }
+        width: 270px;
+        height: 260px;
     }
+
 }
 
 .team__card--container {
@@ -283,11 +287,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    
-    
-    @media screen and (min-width: 768px) {}
-    
-    @media screen and (min-width: 1200px) {}
 }
 
 .client-icon {
